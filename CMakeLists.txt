@@ -16,3 +16,6 @@ project(miniaudio
 
 add_library(miniaudio INTERFACE
         miniaudio.h)
+
+target_include_directories(miniaudio INTERFACE
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>)
